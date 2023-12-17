@@ -21,26 +21,14 @@ const authSlice = createSlice({
   initialState,
   extraReducers: builder =>
     builder
-      .addCase(registerThunk.pending, state => {
-        state.authenticated = false;
-      })
       .addCase(registerThunk.fulfilled, (state, { payload }) => {
         state.user = payload.user;
         state.token = payload.token;
         state.authenticated = true;
       })
-      .addCase(registerThunk.rejected, (state, { payload }) => {
-        state.authenticated = true;
-      })
-      .addCase(loginThunk.pending, state => {
-        state.authenticated = false;
-      })
       .addCase(loginThunk.fulfilled, (state, { payload }) => {
         state.user = payload.user;
         state.token = payload.token;
-        state.authenticated = true;
-      })
-      .addCase(loginThunk.rejected, (state, { payload }) => {
         state.authenticated = true;
       })
       .addCase(logoutThunk.pending, state => {})

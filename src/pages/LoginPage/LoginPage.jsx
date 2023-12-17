@@ -18,8 +18,6 @@ const LoginPage = () => {
         password,
       })
     );
-
-    e.target.reset();
   };
   return (
     <ContainerLogin>

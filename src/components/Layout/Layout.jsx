@@ -31,8 +31,7 @@ const Layout = () => {
               </div>
             </NavLink>
           ) : (
-            <NavLink
-              to="/"
+            <div
               className="nav-layout nav-log"
               onClick={() => dispatch(logoutThunk())}
             >
@@ -40,7 +39,7 @@ const Layout = () => {
                 <span>{`Welcome,${userName}`} </span> <AiOutlineUserDelete />
                 <span className="nav-span-layout">Log out</span>
               </div>
-            </NavLink>
+            </div>
           )}
         </div>
       </header>

@@ -20,7 +20,6 @@ const RegisterPage = () => {
         password,
       })
     );
-    e.target.reset();
   };
   return (
     <ContainerRegister>
