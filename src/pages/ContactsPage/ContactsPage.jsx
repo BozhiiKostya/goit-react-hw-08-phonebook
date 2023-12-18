@@ -18,7 +18,7 @@ const ContactsPage = () => {
 
   useEffect(() => {
     dispatch(fetchContacts());
-  }, [dispatch, contacts]);
+  }, [dispatch]);
 
   return (
     <ContainerContacts>
